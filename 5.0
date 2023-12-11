@@ -1,0 +1,4 @@
+Requirement already satisfied: Django in c:\users\ndimb\appdata\local\programs\python\python312\lib\site-packages (5.0)
+Requirement already satisfied: asgiref>=3.7.0 in c:\users\ndimb\appdata\local\programs\python\python312\lib\site-packages (from Django) (3.7.2)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\ndimb\appdata\local\programs\python\python312\lib\site-packages (from Django) (0.4.4)
+Requirement already satisfied: tzdata in c:\users\ndimb\appdata\local\programs\python\python312\lib\site-packages (from Django) (2023.3)

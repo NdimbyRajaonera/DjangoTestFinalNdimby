@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            font-style: italic;
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        .header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .section {
+            margin: 50px 0;
+        }
+
+        img {
+            max-width: 500px;
+            max-height: 500px;
+            float: right;
+            margin-left: 20px;
+        }
+
+        .no-bullets {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2 style="text-align: center; color: #fff;">Mon Portfolio</h2>
+        <form method="post" action="/logout/">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Déconnexion</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="section">
+            <img src="{% static 'assets/img/ndimby.jpg' %}" class="img-fluid" alt="Photo de Ndimby RAJAONERA">
+            <h1>RAJAONERA Ndimbison Jean Luc</h1>
+                <p class="lead">Logisticien devenu développeur informatique</p>
+                <p style="font-size: 20px;">Développement web, programmation, gestion de projet</p>
+                <p style="font-size: 20px;">Passionné par la musique et la lecture</p>
+
+                <h2>Coordonnées :</h2>
+                    <p>Numéro de téléphone : +261 34 70 938 21</p>
+                    <p>Adresse e-mail : ndimbyrajaonera@gmail.com</p>
+                    <p>Profil LinkedIn : Ndimbison Jean Luc RAJAONERA</p>
+
+                <h2>Formations et diplômes :</h2>
+                    <ul class="no-bullets">
+                        <li>2023 : Concepteur Développeur d'Applications Numériques, Inclusiv Academy (6 mois)</li>
+                        <li>2020 : Master en Science de Gestion, parcours Management et Développement d'Entreprise, ISCAM (Institut Supérieur de la Communication, des Affaires et du Management)</li>
+                        <li>2017 : Licence en Gestion et Management, parcours Création d'Entreprise, IMGAM (Institut de Management des Arts et des Métiers)</li>
+                        <li>2013 : DELF B2 (Diplôme d'Etudes en Langue Française au niveau B2), Alliance Française</li>
+                    </ul>
+
+                <h2>Expériences professionnelles :</h2>
+                    <ul class="no-bullets">
+                        <li>Octobre 2023 : Plateforme de Mise en Relation Entreprise Etudiant : « Meet-Tady », utilisant C# en Back End, WPF en Front End et PostgreSQL comme base de données</li>
+                        <li>Mars 2020 - Actuellement : Co-Gérant maison de Commerce – Etoiles Des Neiges</li>
+                        <li>Septembre 2017 - Février 2020 : Responsable Logistique – H.Entreprise</li>
+                    </ul>
+
+                <h2>Compétences acquises lors de la formation chez Inclusiv :</h2>
+                    <ul class="no-bullets">
+                        <li>Langages : Java, C#</li>
+                        <li>Technologies : JEE (Jsp/Servlets/JSTL, JDBC, RMI, Struts, Hibernate, Spring, JSF, Ejb3, JPA, WebServices), .Net (WinForm, ASP.NET, WebServices), Web (HTML, CSS, XML, Javascript, Ajax)</li>
+                        <li>Outils : PowerAMC, Eclipse, Visual Studio, Net Bean, Proteus, Flowcode, Visual Paradigm, WampServer, TeamViewer</li>
+                        <li>Base de données : Oracle (SQL-PL/SQL), SQL Server, MySQL</li>
+                        <li>Méthode de gestion de projet : Scrum
+        <h2>Centres d'intérêts :</h2>
+                    <ul class="no-bullets">
+                        <li>Jeux de réflexion (échecs, belote, etc.)</li>
+                        <li>Promenade et voyage</li>
+                        <li>Passion pour la musique douce</li>
+                        <li>Interaction sociale en personne et en ligne</li>
+                    </ul>
+
+                <h2>Langues :</h2>
+                    <ul class="no-bullets">
+                        <li>Malagasy : Langue maternelle</li>
+                        <li>Français : Courant (DELF B2)</li>
+                        <li>Anglais : Débutant</li>
+                    </ul>
+            <p style="font-size: 20px;">Email: <a href="mailto:ndimbyrajaonera@gmail.com">ndimbyrajaonera@gmail.com</a></p>
+            <a href="{% url 'portfolio:avis' %}" class="btn btn-primary">Donner votre Observation</a>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="text-align: center;">Ceci est le portfolio de Ndimby RAJAONERA</p>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
